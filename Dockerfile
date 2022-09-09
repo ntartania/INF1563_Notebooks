@@ -2,10 +2,10 @@
 FROM alpine:3.14
 
 RUN apk update
-RUN apk install -y python3-pip
+RUN apk add python3-pip
 RUN python3 --version
 
-RUN apk install -y libffi-dev
+RUN apk add libffi-dev
 
 # add requirements.txt, written this way to gracefully ignore a missing file
 COPY . .
