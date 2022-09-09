@@ -5,7 +5,7 @@ RUN apk update
 RUN apk add py3-pip
 RUN python3 --version
 
-RUN apk add libffi-dev
+RUN apk add libffi-dev libxml2 libxslt
 
 # add requirements.txt, written this way to gracefully ignore a missing file
 COPY . .
