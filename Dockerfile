@@ -1,10 +1,6 @@
 FROM openjdk:11.0.3-jdk
 
 RUN apt-get update
-RUN apt-get install -y software-properties-common
-RUN add-apt-repository ppa:deadsnakes/ppa
-RUN apt-get update
-RUN apt-get install -y python3.6
 RUN apt-get install -y python3-pip
 RUN python3 --version
 
