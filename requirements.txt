@@ -1,6 +1,6 @@
 Jinja2>=2.10.1
 MarkupSafe>=1.1.1
-Pygments==2.3.1
+Pygments==2.4.1
 Send2Trash==1.5.0
 argon2-cffi==20.1.0
 attrs==19.1.0
@@ -22,7 +22,7 @@ jupyter-core==4.6.0
 jupyter==1.0.0
 jupyterlab-server==0.2.0
 jupyterlab==0.35.4
-mistune==0.8.4
+mistune>=2.0.3
 nbconvert>=6.0.0a0
 nbformat==4.4.0
 notebook>=6.2.0
