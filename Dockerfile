@@ -1,6 +1,7 @@
 FROM openjdk:11.0.3-jdk
 
 RUN apt-get update
+RUN python3 --version
 RUN apt-get install -y python3-pip
 RUN apt-get install -y libffi-dev
 
