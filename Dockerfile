@@ -2,7 +2,7 @@
 FROM alpine:3.14
 
 RUN apk update
-RUN apk add python3-pip
+RUN apk add py3-pip
 RUN python3 --version
 
 RUN apk add libffi-dev
