@@ -6,7 +6,7 @@ RUN apk add py3-pip
 RUN python3 --version
 RUN pip3 install wheel
 
-RUN apk add build-base libffi-dev libxml2-dev libxslt-dev zlib-dev python3-dev
+RUN apk add build-base libffi-dev libxml2-dev libxslt-dev zlib-dev python3-dev curl
 
 # add requirements.txt, written this way to gracefully ignore a missing file
 COPY . .
