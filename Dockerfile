@@ -7,6 +7,8 @@ RUN apt-get update
 #RUN apt-get py3-pip
 RUN python3 --version
 
+RUN apt-get install -y build-essential libffi-dev libxml2-dev libxslt-dev zlib1g-dev python3-dev curl
+
 # Set up the user environment
 
 ENV NB_USER jovyan
@@ -26,7 +28,6 @@ USER $NB_USER
 
 RUN pip3 install wheel
 
-RUN apt-get install -y build-essential libffi-dev libxml2-dev libxslt-dev zlib1g-dev python3-dev curl
 
 # add requirements.txt, written this way to gracefully ignore a missing file
 COPY . .
