@@ -41,7 +41,7 @@ setuptools==40.8.0
 six==1.12.0
 terminado==0.8.1
 testpath==0.4.2
-tornado==6.0.1
+tornado==6.1.0
 traitlets==5.1.0
 wcwidth==0.1.7
 webencodings==0.5.1
