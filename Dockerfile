@@ -6,6 +6,24 @@ USER root
 RUN apt-get update
 #RUN apt-get py3-pip
 RUN python3 --version
+
+# Set up the user environment
+
+ENV NB_USER jovyan
+ENV NB_UID 1007
+ENV HOME /home/$NB_USER
+
+RUN adduser --disabled-password \
+    --gecos "Default user" \
+    --uid $NB_UID \
+    $NB_USER
+
+COPY . $HOME
+RUN chown -R $NB_UID $HOME
+
+USER $NB_USER
+
+
 RUN pip3 install wheel
 
 RUN apt-get install -y build-essential libffi-dev libxml2-dev libxslt-dev zlib1g-dev python3-dev curl
@@ -24,22 +42,6 @@ RUN curl -L https://github.com/SpencerPark/IJava/releases/download/v1.3.0/ijava-
 RUN unzip ijava-kernel.zip -d ijava-kernel \
   && cd ijava-kernel \
   && python3 install.py --sys-prefix
-
-# Set up the user environment
-
-ENV NB_USER jovyan
-ENV NB_UID 1007
-ENV HOME /home/$NB_USER
-
-RUN adduser --disabled-password \
-    --gecos "Default user" \
-    --uid $NB_UID \
-    $NB_USER
-
-COPY . $HOME
-RUN chown -R $NB_UID $HOME
-
-USER $NB_USER
 
 # Launch the notebook server
 WORKDIR $HOME
