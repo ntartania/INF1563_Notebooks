@@ -25,8 +25,8 @@ jupyterlab==0.35.4
 lxml==4.5.0
 mistune==0.8.4
 nbconvert==6.0.0a0
-nbformat>=4.4.0
-notebook>=6.2.0
+nbformat==4.4.0
+notebook==6.2.0
 pandocfilters==1.4.2
 parso==0.3.4
 pickleshare==0.7.5
