@@ -1,12 +1,13 @@
 #FROM openjdk:11.0.3-jdk
-FROM alpine:3.14
+#FROM alpine:3.14
+FROM openkbs/jdk-mvn-py3
 
-RUN apk update
-RUN apk add py3-pip
+RUN apt-get update
+#RUN apt-get py3-pip
 RUN python3 --version
 RUN pip3 install wheel
 
-RUN apk add build-base libffi-dev libxml2-dev libxslt-dev zlib-dev python3-dev curl
+RUN apt-get install =y build-base libffi-dev libxml2-dev libxslt-dev zlib-dev python3-dev curl
 
 # add requirements.txt, written this way to gracefully ignore a missing file
 COPY . .
