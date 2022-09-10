@@ -4,6 +4,7 @@ FROM alpine:3.14
 RUN apk update
 RUN apk add py3-pip
 RUN python3 --version
+RUN pip3 install wheel
 
 RUN apk add build-base libffi-dev libxml2-dev libxslt-dev zlib-dev python3-dev
 
