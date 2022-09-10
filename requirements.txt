@@ -1,6 +1,6 @@
 Jinja2==3.0.3
 MarkupSafe>=2.0.0
-Pygments==2.5.2
+Pygments==2.7.4
 Send2Trash==1.5.0
 argon2-cffi==20.1.0
 attrs==19.1.0
