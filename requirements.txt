@@ -37,7 +37,7 @@ python-dateutil==2.5.2
 pywinpty==0.5.7
 pyzmq==18.0.1
 qtconsole==4.4.3
-setuptools==40.8.0
+setuptools==65.5.1
 six==1.15.0
 terminado==0.8.3
 testpath==0.4.2
